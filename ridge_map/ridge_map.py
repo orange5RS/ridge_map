@@ -6,6 +6,7 @@ from matplotlib.collections import LineCollection
 import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 import numpy as np
+
 from skimage.filters import rank
 from skimage.morphology import square
 from skimage.util import img_as_ubyte
@@ -72,6 +73,8 @@ class RidgeMap:
             Optional, a custom font to use. Defaults to Cinzel Regular.
         """
         self.bbox = bbox
+
+
         self._srtm_data = srtm.get_data()
         if font is None:
             font = FontManager().prop
